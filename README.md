@@ -2,6 +2,16 @@
 
 *Read this in other languages: [한국어](README-ko.md), [中国](README-cn.md).*
 
+This is a version of the Speech Sandbox that uses [Watson Translator](https://www.ibm.com/watson/services/language-translator/) to translate from any language (Japanese in this example) to English, and then passing to Speech-to-Text and Watson Assistant to extract intents and entities.
+
+Change `Scripts/SpeechSandboxStreaming.cs` line #51 to use a different language translation model:
+```
+private string _translationModel = "ja-en";
+
+```
+
+[For all translation models](https://console.bluemix.net/docs/services/language-translator/translation-models.html#translation-models)
+
 > Watson Conversation is now Watson Assistant. Although some images in this code pattern may show the service as Watson Conversation, the steps and processes will still work.
 
 In this Code Pattern we will create a Virtual Reality game based on Watson's [Speech-to-Text](https://www.ibm.com/watson/developercloud/speech-to-text.html) and Watson's [Assistant](https://www.ibm.com/watson/developercloud/conversation.html) services.
@@ -56,13 +66,14 @@ In [IBM Cloud](https://console.ng.bluemix.net/):
 
 1. Create a [Speech-To-Text](https://console.ng.bluemix.net/catalog/speech-to-text/) service instance.
 2. Create an [Assistant](https://console.ng.bluemix.net/catalog/services/conversation/) service instance.
+3. Create a [Language Translator](https://www.ibm.com/watson/services/language-translator/) service instance.
 3. Once you see the services in the Dashboard, select the Assistant service you created and click the !["Launch Tool"](/doc/source/images/workspace_launch.png?raw=true) button.
 4. After logging into the Assistant Tool, click the !["Import"](/doc/source/images/import_icon.png?raw=true) button.
 5. Import the Assistant [`workspace.json`](data/workspace.json) file located in your clone of this repository.
 
 ## 3. Building and Running
 
-> Note: This has been compiled and tested using Unity 2017.4.1f3 and Watson Unity SDK from the Unity asset Store as of May 2, 2018 and tested with the `develop` branch of the github unity-sdk as of `commit 9b439ca57bdb May2`.
+> Note: This has been compiled and tested using Unity 2018.2.0f2 and Watson Unity SDK from the Unity asset Store as of Sept 2, 2018 and tested with the `develop` branch of the github unity-sdk as of `commit 9b439ca57bdb May2`.
 
 1. Either download the Watson Unity SDK from the Unity asset store or perform the following:
 
@@ -73,29 +84,14 @@ For the github version make sure you are on the develop branch.
 1. Navigate to where you cloned this repository and open the `Creation Sandbox` directory.
 1. If prompted to upgrade the project to a newer Unity version, do so.
 1. Follow [these instructions](https://github.com/watson-developer-cloud/unity-sdk#getting-the-watson-sdk-and-adding-it-to-unity) to add the Watson Unity SDK downloaded in step 1 to the project.
-1. Follow [these instructions](https://github.com/watson-developer-cloud/unity-sdk#configuring-your-service-credentials) to create your Speech To Text and Conversation services and find their credentials (using [IBM Cloud](https://console.ng.bluemix.net/)).
+1. Follow [these instructions](https://github.com/watson-developer-cloud/unity-sdk#configuring-your-service-credentials) to create your Speech To Text, Language Translator, and Watson Assistant services and find their credentials (using [IBM Cloud](https://console.ng.bluemix.net/)).
  You can find your workspace ID by selecting the expansion menu on your conversation workspace and selecting `View details`.
     ![View Details Location](doc/source/images/workspace_details.png?raw=true)
-1. Open the script `vr-speech-sandbox-cardboard/SpeechSandbox/Assets/Scripts/SpeechSandboxStreaming.cs`
-1. Fill in the credentials for Speech to Text and Conversation, and the Conversation workspace id:
-```
-    private string stt_username = "";
-    private string stt_password = "";
-    // Change stt_url if different from below
-    private string stt_url = "https://stream.watsonplatform.net/speech-to-text/api";
-
-    private string convo_username = "";
-    private string convo_password = "";
-    // Change convo_url if different from below
-    private string convo_url = "https://gateway.watsonplatform.net/conversation/api";
-    // Change  _conversationVersionDate if different from below
-    private string _conversationVersionDate = "2017-05-26";
-    private string convo_workspaceId = "";
-```
-
-If you followed the previous steps you should already be inside your local clone and ready to get started running the app from Unity.
-
 1. In the Unity editor project tab, select _Assets_->_Scenes_->_Playground_ and double click to load the scene.
+1. In the `Hierarchy` of your Unity app, go to `Playground`->`Player`->`StreamingSpeech` object and fill in the credentials for Speech to Text, Language Translator, and Conversation, and the Conversation workspace id:
+
+![](doc/source/images/translateSpeechSandboxCreds.png)
+
 1. Press Play
 1. To Build an android .apk file and deploy to your phone, you can _File_ -> _Build_ Settings (Ctrl + Shift +B) and click Build.
 1. When prompted you can name your build and then move it to your phone.
