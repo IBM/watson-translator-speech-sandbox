@@ -75,11 +75,11 @@ In [IBM Cloud](https://console.ng.bluemix.net/):
 
 > Note: This has been compiled and tested using Unity 2018.2.0f2 and Watson Unity SDK from the Unity asset Store as of Sept 2, 2018 and tested with the `develop` branch of the github unity-sdk as of `commit 9b439ca57bdb May2`.
 
-1. Either download the Watson Unity SDK from the Unity asset store or perform the following:
+1. Download the [Watson SDK for Unity](https://github.com/watson-developer-cloud/unity-sdk) or perform the following:
 
 `git clone https://github.com/watson-developer-cloud/unity-sdk.git`
 
-For the github version make sure you are on the develop branch.
+Make sure you are on the develop branch.
 1. Open Unity and inside the project launcher select the ![Open](doc/source/images/unity_open.png?raw=true) button.
 1. Navigate to where you cloned this repository and open the `Creation Sandbox` directory.
 1. If prompted to upgrade the project to a newer Unity version, do so.
