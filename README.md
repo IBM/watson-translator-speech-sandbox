@@ -10,7 +10,7 @@ private string _translationModel = "ja-en";
 
 ```
 
-[For all translation models](https://console.bluemix.net/docs/services/language-translator/translation-models.html#translation-models)
+[For all translation models](https://cloud.ibm.com/docs/services/language-translator/translation-models.html#translation-models)
 
 > Watson Conversation is now Watson Assistant. Although some images in this code pattern may show the service as Watson Conversation, the steps and processes will still work.
 
@@ -52,7 +52,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 ## 1. Before You Begin
 
-* [IBM Cloud Account](http://ibm.biz/Bdimr6)
+* [IBM Cloud Account](https://cloud.ibm.com/registration/)
 * [Unity](https://unity3d.com/get-unity/download)
 * [Android Unity SDK](https://docs.unity3d.com/Manual/android-sdksetup.html)
 
@@ -62,10 +62,10 @@ On your local machine:
 1. `git clone https://github.com/IBM/vr-speech-sandbox-cardboard.git`
 2. `cd vr-speech-sandbox-cardboard`
 
-In [IBM Cloud](https://console.ng.bluemix.net/):
+In [IBM Cloud](https://cloud.ibm.com):
 
-1. Create a [Speech-To-Text](https://console.ng.bluemix.net/catalog/speech-to-text/) service instance.
-2. Create an [Assistant](https://console.ng.bluemix.net/catalog/services/conversation/) service instance.
+1. Create a [Speech-To-Text](https://cloud.ibm.com/catalog/speech-to-text/) service instance.
+2. Create an [Assistant](https://cloud.ibm.com/catalog/services/conversation/) service instance.
 3. Create a [Language Translator](https://www.ibm.com/watson/services/language-translator/) service instance.
 3. Once you see the services in the Dashboard, select the Assistant service you created and click the !["Launch Tool"](/doc/source/images/workspace_launch.png?raw=true) button.
 4. After logging into the Assistant Tool, click the !["Import"](/doc/source/images/import_icon.png?raw=true) button.
@@ -84,7 +84,7 @@ Make sure you are on the develop branch.
 1. Navigate to where you cloned this repository and open the `Creation Sandbox` directory.
 1. If prompted to upgrade the project to a newer Unity version, do so.
 1. Follow [these instructions](https://github.com/watson-developer-cloud/unity-sdk#getting-the-watson-sdk-and-adding-it-to-unity) to add the Watson Unity SDK downloaded in step 1 to the project.
-1. Follow [these instructions](https://github.com/watson-developer-cloud/unity-sdk#configuring-your-service-credentials) to create your Speech To Text, Language Translator, and Watson Assistant services and find their credentials (using [IBM Cloud](https://console.ng.bluemix.net/)).
+1. Follow [these instructions](https://github.com/watson-developer-cloud/unity-sdk#configuring-your-service-credentials) to create your Speech To Text, Language Translator, and Watson Assistant services and find their credentials (using [IBM Cloud](https://cloud.ibm.com)).
  You can find your workspace ID by selecting the expansion menu on your conversation workspace and selecting `View details`.
     ![View Details Location](doc/source/images/workspace_details.png?raw=true)
 1. In the Unity editor project tab, select _Assets_->_Scenes_->_Playground_ and double click to load the scene.
@@ -114,7 +114,7 @@ Make sure you are on the develop branch.
 # Links
 
 * [Demo on YouTube](https://youtu.be/OsbV1xqX0hQ)
-* [Watson Unity SDK](https://github.com/IBM/unity-sdk)
+* [Watson Unity SDK](https://github.com/watson-developer-cloud/unity-sdk)
 
 # Troubleshooting
 
@@ -134,12 +134,12 @@ The solution is to go to `Build Settings`->`Player Settings`->
 
 # Learn more
 
-* **Artificial Intelligence Code Patterns**: Enjoyed this Code Pattern? Check out our other [AI Code Patterns](https://developer.ibm.com/code/technologies/artificial-intelligence/).
+* **Artificial Intelligence Code Patterns**: Enjoyed this Code Pattern? Check out our other [AI Code Patterns](https://developer.ibm.com/technologies/artificial-intelligence/).
 * **AI and Data Code Pattern Playlist**: Bookmark our [playlist](https://www.youtube.com/playlist?list=PLzUbsvIyrNfknNewObx5N7uGZ5FKH0Fde) with all of our Code Pattern videos
 * **With Watson**: Want to take your Watson app to the next level? Looking to utilize Watson Brand assets? [Join the With Watson program](https://www.ibm.com/watson/with-watson/) to leverage exclusive brand, marketing, and tech resources to amplify and accelerate your Watson embedded commercial solution.
 
 # License
 
-This code pattern is licensed under the Apache Software License, Version 2.  Separate third party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1 (DCO)](https://developercertificate.org/) and the [Apache Software License, Version 2](http://www.apache.org/licenses/LICENSE-2.0.txt).
+This code pattern is licensed under the Apache Software License, Version 2.  Separate third party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1 (DCO)](https://developercertificate.org/) and the [Apache Software License, Version 2](https://www.apache.org/licenses/LICENSE-2.0.txt).
 
-[Apache Software License (ASL) FAQ](http://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN)
+[Apache Software License (ASL) FAQ](https://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN)
