@@ -8,9 +8,9 @@
 This is a version of the Speech Sandbox that uses [Watson Translator](https://www.ibm.com/watson/services/language-translator/) to translate from any language (Japanese in this example) to English, and then passing to Speech-to-Text and Watson Assistant to extract intents and entities.
 
 Change `Scripts/SpeechSandboxStreaming.cs` line #51 to use a different language translation model:
+
 ```
 private string _translationModel = "ja-en";
-
 ```
 
 [For all translation models](https://cloud.ibm.com/docs/services/language-translator/translation-models.html#translation-models)
